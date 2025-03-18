@@ -1,0 +1,9 @@
+<h1>Available Rides</h1>
+<% @rides.each do |ride| %>
+  <div>
+    <h3>From: <%= ride.start_location %> to <%= ride.end_location %></h3>
+    <p>Time: <%= ride.time %></p>
+    <p>Driver: <%= ride.driver.name %></p>
+    <%= link_to 'View Ride', ride_path(ride) %>
+  </div>
+<% end %>
